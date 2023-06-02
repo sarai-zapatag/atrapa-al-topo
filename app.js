@@ -21,4 +21,18 @@ cuadrado.forEach (identificador => {
          posiciontopo = null;
        }
      })
-})
+});
+
+function movertopo (){
+  tiempotopo = setInterval(cuadradoazar,700);
+}
+movertopo();
+
+function cuentaregresiva (){
+  tiempoactual--;
+  tiempofaltante.textContent = tiempoactual;
+  if (tiempoactual=== 0){
+    clearInterval(idtiempo);
+    clearInterval(tiempotopo);
+    alert ("Se acabo el tiempo, tu puntaje fue:" + resultado + "Topos atrapados:");
+    }
